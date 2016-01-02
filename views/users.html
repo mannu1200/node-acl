@@ -1,0 +1,49 @@
+<html>
+<head>
+	<style>
+		.wrap {
+		position:relative;
+		margin:0 auto;
+               /*replace 900px with your width*/
+		width:900px;
+	}
+
+	#header, #footer {
+		width:100%;
+		float:left;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<div class="wrap">
+			<div class="logo">
+				<a href="#"></a>
+			</div>
+			<p>Users Lists</p>
+		</div>
+	</div>	
+	<input value=<%= abcd %>/>
+	<!--List of users-->
+	<div>
+	<%
+		if(users.length) {
+			user.forEach(function(usr){
+				<div>  </div>
+			});
+		}
+	%>
+	</div>
+
+
+	<div id="footer">
+		<div class="wrap">
+			<p>This is footer content</p>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
