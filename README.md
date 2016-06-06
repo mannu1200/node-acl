@@ -20,18 +20,18 @@ Technologies Used
 
 Code Structure
 --------------
-* All database intracations are done by model/ files
+* All database intractions are done by model/ files
 * Controller (Business logic) is inside routes/ files
 * All APIs are mentioned inside routes/index
 * Sagregation of model/controller files is done table wise
-* All constants,database ENUMs,constants are stored in config/app_confi* js
+* All constants,database ENUMs are stored in config/app_config.js
 * All linux configuration are stored in config/cfg/
-* Database dump is stored in resources/db/ should be updated after every DDL commands
-* Test code is be inside test/
-* Javascripts,CSS,images,Landing HTML pages file are in public/ directory
-* Custom library and common functinos are inside lib/
+* Database dump is stored in resources/db/ should be updated after every DDL command
+* Test code is to be inside test/
+* Javascripts,CSS,images,Landing pages are in public/ directory
+* Custom library and common functions are inside lib/
 * Self executing scripts and crons are inside bin/
-* All frontend pages to be rendered are inside views/
+* Frontend pages to be rendered are inside views/
 
 Coding Practices Used
 ---------------------
