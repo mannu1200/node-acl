@@ -15,6 +15,8 @@ How Does it work ?
 ------------------
 
 		  Api call(Requires authentication/authrization)			Api call (authentication/authrization)
+
+
 App/frontend panel------------------------------------------>  Your backend service 1  -------------------->  Node-acl server
 App/frontend panel------------------------------------------>  Your backend service 2  -------------------->  Node-acl server
 
@@ -33,21 +35,21 @@ tb_promotions:
 APIs (API documentation is inside routes/index.js)
 -------------
 /v1/acl/login
-1. Check wheater the user is already logged-in in the system (using req.cookies.token)
-2. If it does terminate the call then and there, else validate the password and create a token.
-3. Get the list of permissions of the user.
+* Check whether the user is already logged-in in the system (using req.cookies.token | req.body)
+* If it does, terminate the call then and there, else validate the password and create a new token.
+* Get the list of permissions of the user and send them in response.
 
 /v1/acl/logout
-1. Get token from request body/ cookie
-2. Remove it from tb_acl_tokens.
+* Get token from request body/ cookie
+* Remove it from tb_acl_tokens.
 
 /v1/acl/isloggedin
-1. Checks the presence of token and if it is non-expired!
-2. Returns the list of permissions in case of loggedin.
+* Check the presence of token and if it is non-expired!
+* Return the list of permissions in case of loggedin.
 
 /v1/acl/user/add
-1. Check is user is logged in (token from req body, query string or cookie)
-2. Create an entry in tb_acl_users.
+* Check if user is logged in (token from req body, query string or cookie)
+* Create an entry in tb_acl_users.
 
 /v1/acl/user/edit
 * As the name suggests (Can not update password)
