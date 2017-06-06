@@ -15,7 +15,7 @@ module.exports = require("rc")("app_cofig", {
             "status": ["ACTIVE", "INACTIVE"]
         },
         "acl_tokens": {
-            "default_TTL": 7, //in days,if changing this, change above cookie header too
+            "default_TTL": 7, 
             "infinite_TTL": 999
         }
     },
